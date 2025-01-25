@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--<header> -->
+        <!-- Encabezado -->
+    <header class="header"> <!-- Contenedor del encabezado de la página-->
+        <h1>BIKERS ACCESORIOS </h1> <!-- Título principal de la página -->
+        <!--<nav class="nav">  Sección de navegación (barra de menú) -->
+        <!--<ul> <!-- Lista de elementos de navegación -->
+           <!-- <li><a href="#">Intercomunicadores</a></li>  Enlace a la sección de inicio (aquí solo es un marcador de posición) -->
+            <!-- <li><a href="#">Accesorios</a></li> <!-- Enlace a la sección de servicios -->
+            <!-- <li><a href="#">Equipajes</a></li> <!-- Enlace a la sección de contacto -->
+        <!-- </ul>
+        </nav> -->
+    <!--</header> -->
+        <a href="#" id="cart-icon"><i class="fa-solid fa-cart-shopping"></i>Ver Carrito(<span id="cart-count">0</span>)</a>
+    </header>
+    <!--Seccion de Productos-->
+    <section class="products container">
+
+        <div class="card-product">
+            <img src="images/Chaqueta-AstarsS.png" alt="">
+            <div class="product-title">
+                <h3>Chaqueta Alpinestars GP</h3>
+                <p class="price">$2700000</p>
+            </div>
+            <p>
+                Esta chaqueta de cuero deportiva derivada de las carreras con una silueta revisada tiene un aspecto modernizado y detalles refinados.
+            </p>
+            <div class="product-button">
+                <i class="fa-solid fa-heart"></i>
+                <a href="#" class="add-to-cart">Agregar a Carrito</a>
+            </div>
+        </div>
+
+        <div class="card-product">
+            <img src="images/Casco-RedBull.png" alt="">
+            <div class="product-title">
+                <h3>Casco-RedBull GP</h3>
+                <p class="price">$2700000</p>
+            </div>
+            <p>
+                Casco con especificaciones para MotoGP™, certificado por la FIM. El mismo que usan los pilotos de MotoGP™ PIM Plus (Matriz integrada premium Plus) Materiales de refuerzo, incluidos tejidos híbridos de carbono y carbono-vidrio Diseño de carcasa aerodinámica
+            </p>
+            <div class="product-button">
+                <i class="fa-solid fa-heart"></i>
+                <a href="#" class="add-to-cart">Agregar a Carrito</a>
+            </div>
+        </div>
+
+        <div class="card-product">
+            <img src="images/Botas-Alpinestars_roja.png" alt="">
+            <div class="product-title">
+                <h3>Botas-Alpinestars</h3>
+                <p class="price">$2600000</p>
+            </div>
+            <p>
+                Material superior principal construido con microfibra para una resistencia óptima a la abrasión, al mismo tiempo que ofrece altos niveles de flexibilidad.
+            </p>
+            <div class="product-button">
+                <i class="fa-solid fa-heart"></i>
+                <a href="#" class="add-to-cart">Agregar a Carrito</a>
+            </div>
+        </div>
+
+        <div class="card-product">
+            <img src="images/Guantes-Alpiestars.png" alt="">
+            <div class="product-title">
+                <h3>Guantes-Alpiestars GP</h3>
+                <p class="price">$8400000</p>
+            </div>
+            <p>
+                Esta innovadora y protectora construcción de cuero y múltiples materiales brinda un ajuste seguro y preciso, y cuenta con un puente para los dedos.
+            </p>
+            <div class="product-button">
+                <i class="fa-solid fa-heart"></i>
+                <a href="#" class="add-to-cart">Agregar a Carrito</a>
+            </div>
+        </div>
+
+        <div class="card-product">
+            <img src="images/Intercomu-Midland.png" alt="">
+            <div class="product-title">
+                <h3>Intercomunicador MIDLAND</h3>
+                <p class="price">$2100000</p>
+            </div>
+            <p>
+                Todo en modo Full Duplex, con calidad digital y sistema DNK para la supresión de ruidos y AGC para el control automático del volumen en función del ruido de fondo (ajustable y desactivable).
+            </p>
+            <div class="product-button">
+                <i class="fa-solid fa-heart"></i>
+                <a href="#" class="add-to-cart">Agregar a Carrito</a>
+            </div>
+        </div>
+
+        <div class="card-product">
+            <img src="images/Escape-Akrapovic.png" alt="">
+            <div class="product-title">
+                <h3>Escape-Akrapovic RGS</h3>
+                <p class="price">$5600000</p>
+            </div>
+            <p>
+                Un silenciador de doble flujo construido con titanio liviano y una tapa final de fibra de carbono hecha a mano
+            </p>
+            <div class="product-button">
+                <i class="fa-solid fa-heart"></i>
+                <a href="#" class="add-to-cart">Agregar a Carrito</a>
+            </div>
+        </div>
+    </section>
+
+    <!--cerrar carrito-->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span id="close-cart" class="close-cart">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <ul id="cart-items"></ul>
+            <p id="total">Total: $0</p>
+            <button id="checkout">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!--Compra Exitosa modal/cerrar la compra-->
+
+    <div id="purchase-modal" class="purchase-modal">
+        <div class="purchase-content">
+            <h2>Compra Finalizada</h2>
+            <p>Gracias por tu compra</p>
+            <button id="close-purchase">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+      
+</body>
+<footer class="footer"> <!-- Contenedor del pie de página -->
+    <p>&copy; 2025 MOTO ACCESORIOS. Todos los derechos reservados. &reg; JHONDesing</p> <!-- Mensaje de derechos de autor -->
+</footer>
+</html>
